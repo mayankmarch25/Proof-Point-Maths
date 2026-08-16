@@ -11,8 +11,8 @@ description: >-
   Diagnostic-first teaching, batches capped at 12, a written
   progress report every week. CBSE, ICSE and State Board.
 
-url:     "https://proofpointmaths.in"
-baseurl: ""
+url:     "https://mayankmadhur25.github.io"
+baseurl: "/proofpointmaths"
 
 # Build settings - do not change unless you know why
 markdown: kramdown
