@@ -1,0 +1,26 @@
+# ---------------------------------------------------------------
+# Proof Point Maths - site settings
+# Change anything here and the whole site updates.
+# After editing this file, GitHub rebuilds in about 60 seconds.
+# ---------------------------------------------------------------
+
+title:       Proof Point Maths
+tagline:     Maths tuition, Classes 6 to 12, Chennai
+description: >-
+  Small-batch maths tuition in Chennai for Classes 6 to 12.
+  Diagnostic-first teaching, batches capped at 12, a written
+  progress report every week. CBSE, ICSE and State Board.
+
+url:     "https://proofpointmaths.in"
+baseurl: ""
+
+# Build settings - do not change unless you know why
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

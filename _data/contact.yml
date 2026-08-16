@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------
+# Every phone number, address and timing on the site comes from here.
+# Change it once, it changes everywhere.
+# ---------------------------------------------------------------
+
+phone_display: "+91 XXXXX XXXXX"
+phone_dial:    "+91XXXXXXXXXX"        # for the tap-to-call link
+
+# WhatsApp: country code first, no plus, no spaces
+whatsapp:      "91XXXXXXXXXX"
+
+email:         "hello@proofpointmaths.in"
+
+address_line1: "[Building name, street]"
+address_line2: "Medavakkam, Chennai [PIN]"
+maps_url:      "https://maps.google.com/?q=[paste+your+google+maps+link]"
+
+# Weekend only. Weekday enquiries are answered on WhatsApp.
+timings_saturday: "Saturday, 9.00am to 1.00pm"
+timings_sunday:   "Sunday, 9.00am to 1.00pm"
+timings_note:     "Weekends only. WhatsApp is answered on weekdays."
+
+batch_size:    12
