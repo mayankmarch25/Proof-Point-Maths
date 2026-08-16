@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<!-- HERO -->
+<div class="hero graph">
+  <div class="wrap">
+    <span class="eyebrow">Weekend maths &middot; Classes 5 to 10 &middot; {{ site.data.contact.address_line2 }}</span>
+    <h1>Every mark has to be earned twice.</h1>
+    <p class="lede">Once when your child understands the idea, and again when they can write it down under exam pressure. Most tuition stops at the first. We test for both, every week, and show you the evidence.</p>
+
+    <div class="proof-block">
+      <div class="proof-row">
+        <div class="proof-key">Given</div>
+        <div class="proof-val">Your child is not bad at maths.</div>
+      </div>
+      <div class="proof-row">
+        <div class="proof-key">To prove</div>
+        <div class="proof-val">The marks can follow.</div>
+      </div>
+      <div class="proof-row">
+        <div class="proof-key">Method</div>
+        <div class="proof-val">Understand. Practice. Prove. <span class="qed">&#8718;</span></div>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn" href="{{ '/contact/' | relative_url }}#enquire">Book a free diagnostic class</a>
+      <a class="btn btn-ghost" href="{{ '/programmes/' | relative_url }}">See programmes</a>
+    </div>
+
+    <div class="trust">
+      <div><strong>{{ site.data.contact.batch_size }}</strong>Students per batch, capped</div>
+      <div><strong>Sat &amp; Sun</strong>Weekends only, one teacher</div>
+      <div><strong>5 to 10</strong>CBSE, ICSE, State Board</div>
+      <div><strong>Free</strong>First diagnostic class</div>
+    </div>
+  </div>
+</div>
+
+<!-- METHOD -->
+<section id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Proof &middot; Step 1</span>
+      <h2>Why students lose marks they already know</h2>
+      <p class="lede">Almost no student fails maths because the syllabus is too hard. They fail because a gap from two years ago was never found, and nobody checked whether understanding survived the exam hall.</p>
+    </div>
+    <div class="cards">
+      {% for m in site.data.method %}
+      <div class="card">
+        <span class="num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <h3>{{ m.title }}</h3>
+        <p>{{ m.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES -->
+<section class="graph">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Proof &middot; Step 2</span>
+      <h2>Programmes</h2>
+      <p class="lede">Three weekend batches running now, Classes 5 to 10. Classes 11 and 12 open next. Students are placed by diagnostic result, not only by school grade.</p>
+    </div>
+    {% include programmes.html %}
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Proof &middot; Step 3</span>
+      <h2>How joining works</h2>
+      <p class="lede">Four steps, in order. The diagnostic runs on a weekend and nothing is charged until after step two.</p>
+    </div>
+    <div class="steps">
+      {% for s in site.data.steps %}
+      <div class="step">
+        <div class="step-n">STEP {{ forloop.index | prepend: '0' | slice: -2, 2 }}</div>
+        <div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.body }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="graph">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Corollary</span>
+      <h2>Questions parents ask</h2>
+    </div>
+    {% include faq.html %}
+  </div>
+</section>

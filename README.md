@@ -1,7 +1,11 @@
 # Proof Point Maths
 
-Live at https://proofpointmaths.in
+Live at https://mayankmarch25.github.io/proofpointmaths/
 Built with Jekyll on GitHub Pages, same engine as mayankmadhur.in.
+
+Repo name is `proofpointmaths`. The `baseurl` line in `_config.yml` must
+match that name **exactly, including capitals and hyphens**. If the two ever
+disagree, the site loads as unstyled text because the stylesheet 404s.
 
 ---
 
@@ -16,10 +20,10 @@ went wrong on the Healthcare Pulse repo, where 90 edition files ended up in root
 ```
 proofpointmaths/
 ├── index.html          <- 4 lines. Do not add content here.
-├── _config.yml         <- site title, description, domain
-├── CNAME               <- the custom domain
+├── _config.yml         <- site title, description, baseurl
 ├── README.md           <- this file
 ├── .gitignore
+│                          (CNAME goes here later, see below)
 │
 ├── _data/              <- ALL CONTENT LIVES HERE. Edit YAML, not HTML.
 │   ├── contact.yml         phone, WhatsApp, email, address, timings
@@ -43,7 +47,29 @@ proofpointmaths/
 └── assets/
     ├── css/style.css       one stylesheet, all of it
     ├── js/site.js          one script, all of it
-    └── img/
+    └── img/                brand assets, all generated from the master logo
+        ├── logo-header.png     480px lockup, used in the nav
+        ├── logo.png            1000px lockup, for print and decks
+        ├── logo-mark.png       the pencil-P on its own, square
+        ├── favicon.ico         browser tab
+        ├── favicon-32.png
+        ├── apple-touch-icon.png
+        └── og-image.png        1200x630 card for WhatsApp and LinkedIn shares
+
+## Brand colours
+
+Both are sampled straight from the logo file, and both live in
+`assets/css/style.css` as CSS variables. Change them there and the entire
+site follows.
+
+| Name | Hex | Used for |
+|---|---|---|
+| Navy | `#01213F` | text, buttons, closing band |
+| Red | `#D32223` | accents, section labels, the QED square |
+| Pencil wood | `#F4E7D4` | the featured programme card edge |
+
+Motto: **Understand, practice, prove.** It appears in the nav beside the logo,
+in the hero proof block, and in the footer.
 ```
 
 ---
@@ -95,13 +121,39 @@ That is the whole process. Never create the file in root.
 
 ## Publishing
 
-1. Push to the `main` branch of the GitHub repo
+1. Push to the `main` branch of the repo `proofpointmaths`
 2. Settings, Pages, source = Deploy from branch, `main` / root
-3. Add `proofpointmaths.in` as the custom domain, and at your DNS provider point
-   the apex A records to GitHub Pages and `www` as a CNAME to the repo
-4. Tick Enforce HTTPS once the certificate is issued
+3. Rebuild takes about 60 seconds
 
-Rebuild takes about 60 seconds after each push.
+There is deliberately **no CNAME file** in this repo yet, because
+`proofpointmaths.in` is not registered. A CNAME pointing at a dead domain makes
+the whole site unreachable, including the github.io address.
+
+## Switching to the real domain later
+
+Do these four things together, not one at a time:
+
+1. Confirm the domain resolves. https://dnschecker.org/#A/proofpointmaths.in
+   must return four `185.199.x.153` addresses.
+2. In `_config.yml`, set `url` to `https://proofpointmaths.in` and `baseurl` to `""`
+3. Rename `CNAME-add-this-later.txt` to `CNAME`
+4. Settings, Pages, Custom domain, enter `proofpointmaths.in`, Save, then tick
+   Enforce HTTPS once it is available
+
+DNS records to add at your registrar:
+
+| Type | Name | Value |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | mayankmarch25.github.io |
+
+## If the site ever loads with no styling
+
+The `baseurl` and the repo name have gone out of sync. Nothing else causes it.
+Open `_config.yml` and make `baseurl` match the repo name character for character.
 
 ---
 

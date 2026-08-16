@@ -1,0 +1,12 @@
+<div class="prog">
+  {% for p in site.data.programmes %}
+  <div class="prog-item{% if p.featured %} prog-featured{% endif %}{% if p.status == 'soon' %} prog-soon{% endif %}">
+    <span class="tag">{{ p.tag }}{% if p.status == 'soon' %} &middot; Coming soon{% endif %}</span>
+    <h3>{{ p.title }}</h3>
+    <ul>
+      {% for point in p.points %}<li>{{ point }}</li>{% endfor %}
+    </ul>
+    <div class="prog-foot">{{ p.schedule }} &middot; {{ p.fee }}</div>
+  </div>
+  {% endfor %}
+</div>

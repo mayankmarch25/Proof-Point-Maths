@@ -1,0 +1,44 @@
+# Programme cards. To change a fee, edit the fee line. Nothing else.
+# Set  status: soon  to show a card as Coming soon (no fee, no booking).
+
+- tag:      Classes 5 and 6
+  title:    Number sense and foundation
+  schedule: "Saturday, 90 minutes"
+  fee:      "[Rs fee] per term"
+  points:
+    - Fractions, decimals, ratio and percentage done properly
+    - Reading a word problem and knowing what it is asking
+    - Mental maths and arithmetic speed
+    - The habit of writing every step down
+
+- tag:      Classes 7 and 8
+  title:    Algebra entry and reasoning
+  schedule: "Saturday, 90 minutes"
+  fee:      "[Rs fee] per term"
+  points:
+    - Algebra, linear equations, exponents, geometry basics
+    - Data handling and early probability
+    - Olympiad style questions once a month
+    - The exact chapters that break Class 9 if left open
+
+- tag:      Classes 9 and 10
+  title:    Board readiness
+  schedule: "Sunday, 120 minutes"
+  fee:      "[Rs fee] per term"
+  featured: true
+  points:
+    - Full CBSE, ICSE and State Board coverage
+    - Chapter tests plus a cumulative paper every month
+    - Past board papers from [year] onwards
+    - Presentation and step marking discipline
+
+- tag:      Classes 11 and 12
+  title:    Board plus JEE foundation
+  schedule: "Opening [month year]"
+  fee:      "Register interest"
+  status:   soon
+  points:
+    - Calculus, algebra, coordinate geometry, vectors
+    - Board paper technique and JEE Main problem sets
+    - Timed papers under exam conditions
+    - Message us to be told when the batch opens

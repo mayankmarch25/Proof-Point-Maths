@@ -1,0 +1,29 @@
+---
+layout: page
+permalink: /fees/
+title: Fees
+eyebrow: Terms
+heading: Fees
+lede: Published, not negotiated on the doorstep. All batches run on weekends. The first diagnostic class is free and carries no obligation.
+---
+<table class="fee-table">
+  <thead><tr><th>Programme</th><th>Schedule</th><th>Fee</th></tr></thead>
+  <tbody>
+  {% for p in site.data.programmes %}
+    <tr>
+      <td><strong>{{ p.title }}</strong><br><span class="muted">{{ p.tag }}</span></td>
+      <td>{{ p.schedule }}</td>
+      <td>{{ p.fee }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<div class="note">
+  <h3>What is included</h3>
+  <p>Chapter worksheets, past board papers, monthly cumulative tests, the personal error log and the weekly parent report. There is no separate material charge.</p>
+  <h3>Payment</h3>
+  <p>Fees are payable per term, in advance. [Add your payment terms, refund policy and sibling discount here.]</p>
+  <h3>Classes 11 and 12</h3>
+  <p>The board plus JEE foundation batch opens [month year]. There is no fee to join the waitlist. Choose the waitlist option on the contact form and we will message you when dates are set.</p>
+</div>

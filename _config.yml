@@ -5,14 +5,26 @@
 # ---------------------------------------------------------------
 
 title:       Proof Point Maths
-tagline:     Maths tuition, Classes 6 to 12, Chennai
+tagline:     Understand, practice, prove
 description: >-
-  Small-batch maths tuition in Chennai for Classes 6 to 12.
-  Diagnostic-first teaching, batches capped at 12, a written
-  progress report every week. CBSE, ICSE and State Board.
+  Weekend maths tuition in Chennai for Classes 5 to 10, taught by the
+  founder. Diagnostic first, batches capped at 12, a written progress
+  report every week. CBSE, ICSE and State Board. Classes 11 and 12 opening
+  soon.
 
-url:     "https://mayankmadhur25.github.io"
+# ---------------------------------------------------------------
+# CURRENT SETUP: GitHub project page.
+# baseurl MUST match the repo name exactly, including capitals and hyphens.
+# Repo name is  proofpointmaths  so baseurl is  /proofpointmaths
+# ---------------------------------------------------------------
+url:     "https://mayankmarch25.github.io"
 baseurl: "/proofpointmaths"
+
+# WHEN proofpointmaths.in GOES LIVE, replace the two lines above with:
+#   url:     "https://proofpointmaths.in"
+#   baseurl: ""
+# and create a file called CNAME in the repo root containing one line:
+#   proofpointmaths.in
 
 # Build settings - do not change unless you know why
 markdown: kramdown
